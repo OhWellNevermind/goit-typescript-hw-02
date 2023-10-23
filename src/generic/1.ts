@@ -3,14 +3,15 @@
   Доповніть цю функцію, використовуючи generics, щоб вона повертала правильний тип.
 */
 
-function getPromise () {
+type Mixed = string | number;
+
+function getPromise(): Promise<Mixed[]> {
   return new Promise((resolve) => {
-    resolve(['Text', 50]);
+    resolve(["Text", 50]);
   });
 }
 
-getPromise()
-.then((data) => {
+getPromise().then((data) => {
   console.log(data);
 });
 
